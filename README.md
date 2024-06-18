@@ -1,7 +1,4 @@
-# Welcome to your Expo app 👋
-
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
-
+# Welcome to Sovtech test app 👋
 ## Get started
 
 1. Install dependencies
@@ -16,35 +13,38 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
     npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+In the code you will navigate to the `` /app/tabs/explore.js`` to view the solution
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Requirements:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Your application should feature a text input field and a submit button to add new tasks
 
-## Get a fresh project
+- When a user enters a task in the inut feild and presses the submit button, the task should be added to a list displayed on the screen
 
-When you're ready, run:
+- each task in the list must be accompanied by an "Edit" button
 
-```bash
-npm run reset-project
+- pressing the "Edit" button shouls transform the task text into an  editable input field along with a save button to confirm changes
+
+- Changes must be saved to the task list when "Save" button is pressed
+
+- Each task should also feature a "Remove" button next to the "Edit" button for removing that specific task from the list
+
+- The "Remove" button should not be visible while in edit mode
+
+- Add the attributes testID="toDoLIst" to the Flatlist component
+
+## Start Code
+
+``` javascript
+
+import React, { useState, useCallback } from 'react'; import { View, TextInput, Button, Text, FlatList, StyleSheet } from 'react-native';
+
+const TodoApp = () => { 
+
+return ( <View> ToDo List </View> ); 
+
+};
+
+export default TodoApp;
+
 ```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
